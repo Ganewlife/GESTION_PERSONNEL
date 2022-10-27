@@ -1,0 +1,49 @@
+{% extends 'stagiaire/base.html' %}
+{% block content %}
+<div class="content update">
+	<h2>Enregistrer un stagiaire</h2>
+    <form action="create.php" method="post" enctype="multipart/form-data">
+      
+        <label for="nom">Nom</label>
+        <label for="prenom">Prénom</label>
+        <input type="text"  class="form-control" name="nom" placeholder="" id="nom" required>
+        <input type="text" class="form-control" name="prenom" placeholder="" id="prenom" required>
+        <label for="dates">Date de naissance</label>
+        <label for="email">Email</label>
+        <input type="date" class="form-control" name="dates" placeholder="" id="dates" required>
+        <input type="text" class="form-control" name="email" placeholder="" id="email" required>
+        <label for="tel">Téléphone</label>
+        <label for="urgence"> Contact d'urgence</label>
+        <input type="tel" class="form-control" name="tel" placeholder="" id="tel" required>
+        <input type="text" class="form-control" name="urgence" placeholder="" id="urgence" required>
+        <label for="adresse">Adresse</label>  
+        <label for="cv">CV actualisé</label>  
+        <input type="text" class="form-control" name="adresse" placeholder="" id="adresse" required>             
+        <input type="file"  class="form-control" name="cv"  id="cv" size="30"  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        <label for="diplome">Diplome</label>            
+         <label for="attestation">Attestation de travail</label>
+         <input type="file" class="form-control" name="diplome"    placeholder="" id="diplome">
+        <input type="file" class="form-control" name="travail" placeholder="" id="travail">    
+
+         <label for="stage">Attestation de stage</label>
+         <label for="specialite">Certifications</label> 
+         <input type="file" class="form-control"  name="stage" placeholder="" id="formFile">  
+         <input type="file" class="form-control" name="certifications" placeholder="" id="certifications"> 
+
+         <div class="col-md-4">
+                          <label for="specialite">Spécialité</label> 
+                          
+                          <select id="select"name="specialite" class="form-control" >   
+                    <option value="design graphique">Design graphique</option>
+                     <option value="génie logiciel">Génie logiciel</option>   
+                     <option value="réseaux systèmes">Résaux systèmes et sécurité</option>
+                     <option value="devops cloud">DevOps & cloud</option>
+</select> 
+<hr class="my-4">
+<input type="submit" value="Enregistrer" class="btn btn-success btn-sm m-1">
+</div>       
+
+    </form>
+   
+</div>
+{% endblock %}

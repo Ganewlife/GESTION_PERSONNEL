@@ -1,0 +1,57 @@
+{% extends 'stagiaire/base.html' %}
+{% block content %}
+<div class="content read">
+	<h2>Liste des stagiaires</h2>
+    <div class="col-md-3">
+    <button type="submit"  name="submit" class="btn btn-success glyphicon glyphicon-ok form-control" >
+    <a href="{% url 'create' %}" class="create-stagiaire text-light "> <i class="fa fa-plus"></i>Enregistrer un stagiaire</a>
+    </button>
+    </div>
+    <hr class="my-4">
+	
+	<table>
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Nom</td>
+                <td>Prénom</td>
+                <td>Date de naissance</td>
+                <td>Email</td>
+                <td>Téléphone</td>
+                <td>Numéro d'urgence</td>
+                <td>Adresse</td>
+                <td>Specialité</td>
+                
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <td>['id']</td>
+                <td>['nom']</td>
+                <td>['prenom']</td>
+                <td>['dates']</td>
+                <td>['email']</td>
+                <td>['tel']</td>
+                <td>['urgence']</td>
+                <td>['adresse']</td>
+                <td>['specialite']</td>
+                
+                <td class="actions">
+                    <a href="" class="btn btn-success btn-sm m-1"><i class="fa fa-edit"></i></a>
+                    <a href="" class="btn btn-danger btn-sm m-1"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+           
+        </tbody>
+    </table>
+	<div class="pagination">
+		
+		<a href="" class="btn btn-dark btn-sm m-1"><i class="fa fa-"></i> précédent</a>
+		
+		<a href="" class="btn btn-dark btn-sm m-1"><i class="fa-angle-double-right"></i> suivant</a>
+	
+	</div>
+</div>
+{% endblock %}
