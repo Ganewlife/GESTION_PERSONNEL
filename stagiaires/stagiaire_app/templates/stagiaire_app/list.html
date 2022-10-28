@@ -12,7 +12,7 @@
 	<table>
         <thead>
             <tr>
-                <td>#</td>
+                
                 <td>Nom</td>
                 <td>Prénom</td>
                 <td>Date de naissance</td>
@@ -26,21 +26,21 @@
             </tr>
         </thead>
         <tbody>
-           
+            {% for stagiaire in stagiaires %}
             <tr>
-                <td>['id']</td>
-                <td>['nom']</td>
-                <td>['prenom']</td>
-                <td>['dates']</td>
-                <td>['email']</td>
-                <td>['tel']</td>
-                <td>['urgence']</td>
-                <td>['adresse']</td>
-                <td>['specialite']</td>
+               
+                <td>{{ StagiaireInfo. last_name }}</td>
+                <td>{{ StagiaireInfo.first_name }}</td>
+                <td>{{ StagiaireInfo. birthday }}</td>
+                <td>{{ StagiaireInfo.email }}</td>
+                <td>{{ StagiaireInfo.phone}}</td>
+                <td>{{ StagiaireInfo.emergency_phone }}</td>
+                <td>{{ StagiaireInfo.adress }}</td>
+                <td>{{ StagiaireInfo.specialite }}</td>
                 
                 <td class="actions">
-                    <a href="" class="btn btn-success btn-sm m-1"><i class="fa fa-edit"></i></a>
-                    <a href="" class="btn btn-danger btn-sm m-1"><i class="fa fa-trash"></i></a>
+                    <a href="{% url 'update' %}" class="btn btn-success btn-sm m-1"><i class="fa fa-edit"></i></a>
+                    <a href="{% url 'delete' %}" class="btn btn-danger btn-sm m-1"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
            

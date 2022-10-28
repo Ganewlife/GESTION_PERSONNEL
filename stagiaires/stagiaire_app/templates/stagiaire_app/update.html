@@ -1,47 +1,12 @@
 {% extends 'stagiaire/base.html' %}
 {% block content %}
 <div class="content update">
-	<h2>Modifier les informations de ce stagiaire [...]]?></h2>
+	<h2>Modifier les informations de {{ StagiaireInfo.last_name }}?</h2>
     <form action="" method="post">
+        {% csrf_token %}
         
-        <label for="name">Nom</label>
-        <label for="prenom">Prénom</label>
-        <input type="text" class="form-control" name="nom" placeholder="" value="" id="nom">
-        <input type="text" class="form-control" name="prenom" placeholder="" value="" id="prenom">
-        <label for="dates">Date de naissance</label>
-        <label for="email">Email</label>
-        <input type="date" class="form-control" name="dates" placeholder="" value="" id="dates">
-        <input type="email" class="form-control" name="email" placeholder="" value="" id="email">
-        <label for="tel">Téléphone</label>
-        <label for="urgence">Contact d'urgence</label>
-        <input type="tel" class="form-control" name="tel" placeholder="" value="" id="tel">
-        <input type="tel" class="form-control" name="urgence" placeholder="" value="" id="urgence">
-        <label for="adresse">Adresse</label>
-        <label for="cv">CV actualisé</label>
-        <input type="text" class="form-control" name="adresse" placeholder="2025550143" value="" id="adresse">
-        <input type="file" class="form-control" name="cv"  id="cv" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-        <label for="diplome">Diplome</label>            
-         <label for="travail">Attestation de travail</label>
-         <input type="file" class="form-control" name="diplome"    placeholder="" id="diplome" >
-        <input type="file" class="form-control" name="travail" placeholder="" id="travail">    
-
-         <label for="stage">Attestation de stage</label>
-         <label for="certifications">Certifications</label> 
-         <input type="file" class="form-control" name="stage" placeholder="" id="stage">  
-         <input type="file" class="form-control" name="certifications" placeholder="" id="certifications"> 
-         <div class="col-md-5">
-        <label for="specialite">Spécialité</label>
-        <select id="select" class="form-control" name="specialite" class="form-control" >   
-                    <option value="design graphique">Design graphique</option>
-                     <option value="génie logiciel">Génie logiciel</option>   
-                     <option value="réseaux systèmes">Résaux systèmes et sécurité</option>
-                     <option value="devops cloud">DevOps & cloud</option>
-                    </select>
-                    <hr class="my-4">
-                   <input type="submit" value="Modifier" class="btn btn-success btn-sm m-1">
-                   </div>
+        {{form.as_p}}    
     </form>
-   
-   
+    
 </div>
 {% endblock %}

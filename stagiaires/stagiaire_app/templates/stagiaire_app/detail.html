@@ -1,64 +1,52 @@
 {% extends 'base.html' %}  
+
 {% block title %}  
 <title>Profil</title>  
 {% endblock title %}  
 {% block content %}  
 
-    <form method="POST" class="post-form" enctype="multipart/form-data" >  
-{% csrf_token %}  
+
         <div class="container">  
           
-
+            <h2>Postulant:</h2>  
                 <h1>  
-                    <strong> Nom:</strong>  
-                    <strong> Prénom:</strong>  
+                    <strong> Nom:</strong>   <strong> {{ StagiaireInfo. last_name }}</strong>  
+                    <strong> Prénom:</strong>  <strong>{{ StagiaireInfo.first_name }}</strong>  
                 </h1>  
   
-                <h2>Postulant:</h2>  
+              
                 <br>  
                     <div class="form-group row">  
                         <div class="col-sm-4">  
                             <input type="hidden" name="nom"  required maxlength="15" value="" />  
                         </div>  
                     </div>  
-                    <div class="form-group row">  
-                        <label class="col-sm-3 col-form-label">Id:</label>  
-                        <div class="col-sm-4">  
-                            <label> "" </label>  
-                        </div>  
-                    </div>  
+                 
                     <div class="form-group row">  
                         <label class="col-sm-2 col-form-label"> Adresse:</label>  
                         <div class="col-sm-4">  
-                            <input type="text" name="city" id="id_city" required maxlength="15" value="" />  
+                            {{ StagiaireInfo.adress }} 
                         </div>  
                     </div>  
                     <div class="form-group row">  
                         <label class="col-sm-2 col-form-label">Contact :</label>  
                         <div class="col-sm-4">  
-                            <input type="text" name="contactno" id="id_contactno" required maxlength="15" value="" />  
+                            {{ StagiaireInfo.phone}}
                         </div>  
                     </div>  
                     <div class="form-group">  
                         <label for="id_dob"> Date de naissance:</label>  
-                        <input type="text" name="dob" id="id_dob" required maxlength="25" value="" aria-describedby="passwordHelpInline">  
-                            <span class="input-group-addon">  
-                                <i class="fa fa-calendar fa-lg"></i>  
-                            </span>  
-                      
-
-  
-  
-                        
+                        {{ StagiaireInfo. birthday }}  
                         </div>  
                         <div class="form-group row">  
                             <label class="col-sm-2 col-form-label"></label>  
                             <div class="col-sm-4">  
-                                <button type="submit" class="btn btn-info">Modifier</button>  
-                                <a href="/" class="btn btn-info">Retour</a>  
+                                <a href="{% url 'update' %}" class="btn btn-info">modifier</a> 
+                                <a href="{% url 'delete' %}" class="btn btn-info">supprimer</a>  
+                                <a href="{% url 'list' %}" class="btn btn-info">Retour</a>  
                             </div>  
                         </div>  
                     </div>  
                 </form>  
 
-{% endblock content %}  
+{% endblock %}  

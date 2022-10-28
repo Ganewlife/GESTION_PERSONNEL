@@ -1,0 +1,17 @@
+
+  <div class="login-card">
+    <h1>Inscription</h1><br>
+    {% if form.errors %}
+        {{ form.errors }}
+    {% endif %}
+  <form action="{% url 'signup' %}">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <button type="submit" >S’inscrire</button>
+  </form>
+
+  <div class="register-help">
+    <a href="{% url 'login' %}">Se connecter</a> 
+  </div>
+</div>
