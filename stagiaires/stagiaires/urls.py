@@ -15,14 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from stagiaires import views
+import stagiaire_app.views
+from django.conf import settings # important pour nos medias
+from django.conf.urls.static import static #pour charge nos medias en ligne
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.home, name = 'home'),
-    path('list/', views.list, name = 'list'),
-    path('detail/', views.detail, name = 'detail'),
-    path('create/', views.create, name = 'create'),
-    path('update/', views.update, name = 'update'),
-    path('delete/', views.delete, name = 'delete'),
+    path('', stagiaire_app.views.LoginPageView.as_view(), name='login'),
+    path('logout/', stagiaire_app.views.logout_user, name='logout'),
+    path('home/', stagiaire_app.views.home, name='home'),
+    path('signup/', stagiaire_app.views.signup, name='signup'),
+    path('stagiaire/create', stagiaire_app.views.stagiaire_and_files_upload, name='stagiaire_create'),
+    path('stagiaire/<int:stagiaire_id>', stagiaire_app.views.view_stagiaire_info, name='view_profil'),
+    path('stagaire/<int:stagiaire_id>/edit', stagiaire_app.views.edit_stagiaire_info, name='stagiaire_edit'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

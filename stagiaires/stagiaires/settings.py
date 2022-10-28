@@ -55,7 +55,9 @@ ROOT_URLCONF = 'stagiaires.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR.joinpath('templates'),# Ajouter cette ligne pour que vos templates retrouvent le fichier base
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,3 +126,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'stagiaire_app.User'
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+MEDIA_URL = '/media/'#televersé les fichiers
+MEDIA_ROOT = BASE_DIR.joinpath('media/')#repertoire ou seront sauvegardont nos fichiers
