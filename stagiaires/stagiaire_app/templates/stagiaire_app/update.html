@@ -4,7 +4,6 @@
 	<h2>Modifier les informations de {{ StagiaireInfo.last_name }}?</h2>
     <form action="" method="post">
         {% csrf_token %}
-        
         {{form.as_p}}    
     </form>
     
