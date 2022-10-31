@@ -26,8 +26,8 @@ urlpatterns = [
     path('home/', stagiaire_app.views.home, name='home'),
     path('signup/', stagiaire_app.views.signup, name='signup'),
     path('stagiaire/create', stagiaire_app.views.stagiaire_and_files_upload, name='stagiaire_create'),
-    path('stagiaire/<int:stagiaire_id>', stagiaire_app.views.view_stagiaire_info, name='view_profil'),
-    path('stagaire/<int:stagiaire_id>/edit', stagiaire_app.views.edit_stagiaire_info, name='stagiaire_edit'),
+    path('stagiaire/<int:stagiaire_info_id>', stagiaire_app.views.view_stagiaire_info, name='view_profil'),
+    path('stagaire/<int:stagiaire_info_id>/edit', stagiaire_app.views.edit_stagiaire_info, name='stagiaire_edit'),
 ]
 
 if settings.DEBUG:

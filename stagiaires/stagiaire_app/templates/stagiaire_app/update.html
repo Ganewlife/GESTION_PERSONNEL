@@ -4,8 +4,8 @@
 	<h2>Modifier les informations de {{ StagiaireInfo.last_name }}?</h2>
     <form action="" method="post">
         {% csrf_token %}
-        
-        {{form.as_p}}    
+        {{edit_form.as_p}} 
+        <input type="submit" value="Enregistrer" class="btn btn-success btn-sm m-1">   
     </form>
     
 </div>

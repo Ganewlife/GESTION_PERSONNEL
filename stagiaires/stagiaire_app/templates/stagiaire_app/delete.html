@@ -7,8 +7,14 @@
    
 	<p>Supprimer stagiaire #?</p>
     <div class="yesno">
+        <form method="post">
+            {{ delete_form }}
+            {% csrf_token %}
+            <button type="submit" >Supprimer</button>
+        </form>
         <a href="">OUI</a>
         <a href="">NON</a>
     </div>
 </div>
 {% endblock %}
+    
