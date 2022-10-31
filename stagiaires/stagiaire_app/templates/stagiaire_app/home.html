@@ -3,7 +3,12 @@
 {% block content %}
 <div class="content">
 	<h2>1020 Tehnologies</h2>
+	<a href="{% url 'stagiaire_create' %}">New stagiaire</a>
 	<p>Enregistrement des stagiaires</p>
+        {% for stagiaire in stagiaires %}
+			<a href="{% url 'view_profil' stagiaire.id %}">
+				<h4>{{ stagiaire.specialite }}    {{ stagiaire.first_name }} {{ stagiaire.last_name }}</h4>
+			</a>
+        {% endfor %}
 </div>
-
 {% endblock %}

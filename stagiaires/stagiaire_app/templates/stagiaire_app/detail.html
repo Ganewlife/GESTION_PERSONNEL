@@ -1,52 +1,27 @@
 {% extends 'base.html' %}  
 
 {% block title %}  
-<title>Profil</title>  
-{% endblock title %}  
+<title>Informations Stagiaire {{ infos.last_name }} {{ infos.first_name }}</title>  
+{% endblock title %} 
+
 {% block content %}  
 
 
         <div class="container">  
           
-            <h2>Postulant:</h2>  
-                <h1>  
-                    <strong> Nom:</strong>   <strong> {{ StagiaireInfo. last_name }}</strong>  
-                    <strong> Prénom:</strong>  <strong>{{ StagiaireInfo.first_name }}</strong>  
-                </h1>  
-  
-              
-                <br>  
-                    <div class="form-group row">  
-                        <div class="col-sm-4">  
-                            <input type="hidden" name="nom"  required maxlength="15" value="" />  
-                        </div>  
-                    </div>  
-                 
-                    <div class="form-group row">  
-                        <label class="col-sm-2 col-form-label"> Adresse:</label>  
-                        <div class="col-sm-4">  
-                            {{ StagiaireInfo.adress }} 
-                        </div>  
-                    </div>  
-                    <div class="form-group row">  
-                        <label class="col-sm-2 col-form-label">Contact :</label>  
-                        <div class="col-sm-4">  
-                            {{ StagiaireInfo.phone}}
-                        </div>  
-                    </div>  
-                    <div class="form-group">  
-                        <label for="id_dob"> Date de naissance:</label>  
-                        {{ StagiaireInfo. birthday }}  
-                        </div>  
-                        <div class="form-group row">  
-                            <label class="col-sm-2 col-form-label"></label>  
-                            <div class="col-sm-4">  
-                                <a href="{% url 'update' %}" class="btn btn-info">modifier</a> 
-                                <a href="{% url 'delete' %}" class="btn btn-info">supprimer</a>  
-                                <a href="#" class="btn btn-info">Retour</a>  
-                            </div>  
-                        </div>  
-                    </div>  
-                </form>  
+            <h1>{{ infos.specialite }}</h1>  
+                <h2><strong> Nom:</strong>   <strong> {{ infos.last_name }}</strong></h2>  
+                <h2><strong> Prénom:</strong>  <strong>{{ infos.first_name }}</strong></h2>
+                <h2><strong> Date de Naissance:</strong>   <strong> {{ infos.birthday }}</strong></h2>  
+                <h2><strong> Télephone:</strong>  <strong>{{ infos.phone }}</strong></h2>  
+                <h2><strong> Télephone Urgence:</strong>  <strong>{{ infos.emergency_phone }}</strong></h2>  
+                <h2><strong> Email:</strong>  <strong>{{ infos.email }}</strong></h2>  
+                <h2><strong> Date de création:</strong>  <strong>{{ infos.created_at }}</strong></h2>  
+                <h2><strong> Cv:</strong>  <strong>{{ infos.cv }}</strong></h2>  
+                <h2><strong> Diplome:</strong>  <strong>{{ infos.diplome }}</strong></h2> 
+                <h2><strong> Attestation:</strong>  <strong>{{ infos.attestation }}</strong></h2> 
 
+            <a href="{% url 'stagiaire_edit' infos.id %}" class="btn btn-info">modifier</a> 
+            <a href="#" class="btn btn-info">supprimer</a>  
+        </div>   
 {% endblock %}  

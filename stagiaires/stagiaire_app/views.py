@@ -55,17 +55,17 @@ def stagiaire_and_files_upload(request):
         'stagiaire_form': stagiaire_form}
     return render(request, 'stagiaire_app/create.html', context=context)
 
-def view_stagiaire_info(request, stagiaire_info_id):
-    info = get_object_or_404(models.StagiaireInfo, id=stagiaire_info_id)
-    return render(request, 'stagiaire_app/detail.html', {'profil': info})
-
 def home(request):
     stagiaires = models.StagiaireInfo.objects.all()
     context={'stagiaires': stagiaires}
     return render(request, 'stagiaire_app/home.html', context=context)
 
-def edit_stagiaire_info(request, stagiaire_id):
-    stagiaire_info = get_object_or_404(models.StagiaireInfo, id=stagiaire_id)
+def view_stagiaire_info(request, stagiaire_info_id):
+    infos = get_object_or_404(models.StagiaireInfo, id=stagiaire_info_id)
+    return render(request, 'stagiaire_app/detail.html', {'infos': infos})
+
+def edit_stagiaire_info(request, stagiaire_info_id):
+    stagiaire_info = get_object_or_404(models.StagiaireInfo, id=stagiaire_info_id)
     edit_form = forms.StagiaireForm(instance=stagiaire_info)
     delete_form = forms.DeleteStagiaireForm()
     if request.method == 'POST':
