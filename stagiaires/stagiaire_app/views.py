@@ -4,6 +4,7 @@ from django.views.generic import View
 from django.conf import settings
 from django.contrib.auth import login, authenticate, logout
 from . import forms, models
+
 # Create your views here
 class LoginPageView(View):
     template_name = 'stagiaire_app/login.html'
@@ -18,7 +19,7 @@ class LoginPageView(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             user = authenticate(
-                email=form.cleaned_data['email'],
+                username=form.cleaned_data['username'],
                 password=form.cleaned_data['password'],
             )
             if user is not None:

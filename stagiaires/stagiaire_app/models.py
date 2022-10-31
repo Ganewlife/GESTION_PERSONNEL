@@ -11,8 +11,8 @@ class User(AbstractUser):
     post = models.fields.CharField(max_length=20)
     """ email = models.EmailField(unique=True)
     username = email
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ('first_name', 'last_name', 'post') """
+    USERNAME_FIELD = 'email'"""
+    REQUIRED_FIELDS = ('email','first_name', 'last_name', 'post') 
 # table des spécialités
 
 class Specialite(models.Model):

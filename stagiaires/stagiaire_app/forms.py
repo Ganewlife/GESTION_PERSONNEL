@@ -4,15 +4,15 @@ from django import forms
 from . import models
 
 
-
 class LoginForm(forms.Form):
-    email = forms.EmailField(max_length=63, label='Email :')
+    username = forms.CharField(max_length=30)
+    #email = forms.EmailField(max_length=63, label='Email :')
     password = forms.CharField(max_length=63, widget=forms.PasswordInput, label='Mot de passe')
 
 class SignupForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
-        fields = ('email', 'first_name', 'last_name', 'post')
+        fields = ('username', 'email', 'first_name', 'last_name', 'post')
 
 class SpecialiteForm(forms.ModelForm):
     class Metal: 
