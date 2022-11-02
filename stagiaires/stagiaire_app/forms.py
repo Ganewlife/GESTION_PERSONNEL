@@ -5,7 +5,7 @@ from . import models
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=30)
+    username = forms.CharField(max_length=30, label='Nom d\'utilisateur')
     #email = forms.EmailField(max_length=63, label='Email :')
     password = forms.CharField(max_length=63, widget=forms.PasswordInput, label='Mot de passe')
 
@@ -13,6 +13,11 @@ class SignupForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
         fields = ('username', 'email', 'first_name', 'last_name', 'post')
+        help_texts={
+            'username' : None,
+            'password' : None,
+            'password2' : None,
+        }
 
 class SpecialiteForm(forms.ModelForm):
     class Metal: 

@@ -1,4 +1,4 @@
-from re import template
+from django.contrib.auth.decorators import login_required, permission_required
 from django.shortcuts import render, redirect,get_object_or_404
 from django.views.generic import View
 from django.conf import settings
@@ -43,7 +43,12 @@ def signup(request):
             return redirect(settings.LOGIN_REDIRECT_URL)
     return render(request, 'stagiaire_app/signup.html', context={'form': form})
 
+@login_required
+def user_profil(request):
+    return render(request, 'stagiaire_app/user_profil.html')
+
 # Decorator don't forget it
+@login_required
 def stagiaire_and_files_upload(request):
     stagiaire_form = forms.StagiaireForm()
     if request.method == 'POST':
@@ -55,15 +60,18 @@ def stagiaire_and_files_upload(request):
         'stagiaire_form': stagiaire_form}
     return render(request, 'stagiaire_app/create.html', context=context)
 
+@login_required
 def home(request):
     stagiaires = models.StagiaireInfo.objects.all()
     context={'stagiaires': stagiaires}
     return render(request, 'stagiaire_app/home.html', context=context)
 
+@login_required
 def view_stagiaire_info(request, stagiaire_info_id):
     infos = get_object_or_404(models.StagiaireInfo, id=stagiaire_info_id)
     return render(request, 'stagiaire_app/detail.html', {'infos': infos})
 
+@login_required
 def edit_stagiaire_info(request, stagiaire_info_id):
     stagiaire_info = get_object_or_404(models.StagiaireInfo, id=stagiaire_info_id)
     edit_form = forms.StagiaireForm(instance=stagiaire_info)
@@ -74,11 +82,11 @@ def edit_stagiaire_info(request, stagiaire_info_id):
             if edit_form.is_valid():
                 edit_form.save()
                 return redirect('home')
-            if 'delete_stagiaire' in request.POST:
-                delete_form = forms.DeleteStagiaireForm(request.POST, request.FILES)
-                if delete_form.is_valid():
-                    stagiaire_info.delete()
-                    return redirect('home')
+        if 'delete_stagiaire' in request.POST:
+            delete_form = forms.DeleteStagiaireForm(request.POST, request.FILES)
+            if delete_form.is_valid():
+                stagiaire_info.delete()
+                return redirect('home')
     context = {
         'edit_form': edit_form,
         'delete_form': delete_form,}

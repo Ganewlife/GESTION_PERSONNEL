@@ -1,5 +1,5 @@
 
-  <div class="login-card">
+  <!-- <div class="login-card">
     <h1>Inscription</h1><br>
     {% if form.errors %}
         {{ form.errors }}
@@ -13,4 +13,26 @@
   <div class="register-help">
     <a href="{% url 'login' %}">Se connecter</a> 
   </div>
+</div> -->
+
+<div class="login-card">
+  <h1>Inscription</h1><br>
+  {% if form.errors %}
+      {{ form.errors }}
+  {% endif %}
+<form method="post">
+<p>{{form.username.label}} {{form.username}}</p>
+<p>{{form.email.label}} {{form.email}}</p>
+<p>{{form.first_name.label}} {{form.first_name}}</p>
+<p>{{form.last_name.label}} {{form.last_name}}</p>
+<p>{{form.post.label}} {{form.post}}</p>
+<p>{{form.password1.label}} {{form.password1}}</p>
+<p>{{form.password2.label}} {{form.password2}}</p>
+  {% csrf_token %}
+  <button type="submit" >S’inscrire</button>
+</form>
+
+<div class="register-help">
+  <a href="{% url 'login' %}">Se connecter</a> 
+</div>
 </div>

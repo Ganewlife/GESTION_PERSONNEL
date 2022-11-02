@@ -7,6 +7,11 @@
         {{edit_form.as_p}} 
         <input type="submit" value="Enregistrer" class="btn btn-success btn-sm m-1">   
     </form>
+    <form action="" method="post">
+        {{ delete_form }}
+        {% csrf_token %}
+        <button type="submit" >Êtes-Vous sûr de vouloir Supprimer</button>
+    </form>
     
 </div>
 {% endblock %}
