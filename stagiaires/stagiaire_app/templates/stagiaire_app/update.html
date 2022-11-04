@@ -11,6 +11,11 @@
         <input type="submit" value="Enregistrer" class="btn btn-success btn-sm m-1">   
 >>>>>>> 38bf358c66b6e42901fa4361fc9227303e3666c7
     </form>
+    <form action="" method="post">
+        {{ delete_form }}
+        {% csrf_token %}
+        <button type="submit" >Êtes-Vous sûr de vouloir Supprimer</button>
+    </form>
     
 </div>
 {% endblock %}
