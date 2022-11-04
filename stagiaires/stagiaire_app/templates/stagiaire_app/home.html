@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 <div class="content">
 	<h2>1020 Tehnologies</h2>
-	<a href="{% url 'stagiaire_create' %}">New stagiaire</a>
+	<a href="{% url 'stagiaire_create' %}">Enregistrer un stagiaire</a>
 	<p>Enregistrement des stagiaires</p>
         {% for stagiaire in stagiaires %}
 			<a href="{% url 'view_profil' stagiaire.id %}">

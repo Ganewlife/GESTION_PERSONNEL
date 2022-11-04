@@ -7,16 +7,18 @@
 		<link href="{% static 'style.css'%}" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="{% static 'font-awesome.css'%}">
 		<link rel="stylesheet" href="{% static 'bootstrap.min.css'%}">
+        
         <!-- Bootstrap core CSS -->
-        
-        
+
 	</head>
 	<body>
     <nav class="navtop">
         <div>
-            <h1>1020 Technologies</h1>
+            <img src="{% static 'images/wot.png'%}" alt="#"/>
+            <h1></h1>
+           
             <a href="{% url 'home' %}"></i>Accueil</a>
-            <a href="#"></i> New Stagiaire</a>
+            <a href="{% url 'stagiaire_create' %}"></i> New Stagiaire</a>
         </div>
     </nav>    
         
