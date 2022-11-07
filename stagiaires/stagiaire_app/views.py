@@ -91,3 +91,4 @@ def edit_stagiaire_info(request, stagiaire_info_id):
         'edit_form': edit_form,
         'delete_form': delete_form,}
     return render(request, 'stagiaire_app/update.html', context=context)
+    

@@ -1,0 +1,26 @@
+{%  load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<link href="{% static 'style.css'%}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{% static 'font-awesome.css'%}">
+		<link rel="stylesheet" href="{% static 'bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'wot.png'%}">
+		
+		
+        <!-- Bootstrap core CSS -->
+
+        
+	</head>
+	<body> 
+		<nav class="navtop">
+			<div>
+				<img src="{% static 'images/wot.png'%}" alt="#"/>
+				<h1></h1>
+			</div>
+		</nav>         
+       {% block content %} {% endblock %}
+    </body>
+</html>

@@ -8,6 +8,7 @@
 body {
     background-color: #FFFFFF;
     margin: 60px;
+    
 }
 .navtop {
     background-color: #54c0ff;
@@ -199,4 +200,10 @@ body {
   margin-right: 25px;
   margin-bottom: 15px;
   border: 1px solid #cccccc;
+}
+
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 80% !important;
+    margin-top: 20% !important;
 }

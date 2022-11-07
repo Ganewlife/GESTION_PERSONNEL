@@ -1,4 +1,4 @@
-
+{% extends 'base1.html' %}
   <!-- <div class="login-card">
     <h1>Inscription</h1><br>
     {% if form.errors %}
@@ -15,19 +15,47 @@
   </div>
 </div> -->
 
+{% block content %}
 <div class="login-card">
   <h1>Inscription</h1><br>
   {% if form.errors %}
       {{ form.errors }}
   {% endif %}
 <form method="post">
-<p>{{form.username.label}} {{form.username}}</p>
-<p>{{form.email.label}} {{form.email}}</p>
-<p>{{form.first_name.label}} {{form.first_name}}</p>
-<p>{{form.last_name.label}} {{form.last_name}}</p>
-<p>{{form.post.label}} {{form.post}}</p>
-<p>{{form.password1.label}} {{form.password1}}</p>
-<p>{{form.password2.label}} {{form.password2}}</p>
+  <table>
+    <tr>
+      <td>{{form.username.label}}</td>
+      <td>{{form.username}} </td>
+   </tr>
+   <tr>
+    <td>{{form.email.label}}</td>
+    <td>{{form.email}} </td>
+ </tr>
+ <tr>
+  <td>{{form.email.label}}</td>
+  <td>{{form.email}} </td>
+</tr>
+<tr>
+  <td>{{form.first_name.label}}}</td>
+  <td>{{form.first_name}} </td>
+</tr>
+<tr>
+  <td>{{form.last_name.label}}</td>
+  <td>{{form.last_name}}</td>
+</tr>
+<tr>
+  <td>{{form.post.label}}</td>
+  <td> {{form.post}}</td>
+</tr>
+<tr>
+  <td>{{form.password1.label}}</td>
+  <td> {{form.password1}}</td>
+</tr>
+<tr>
+  <td>{{form.password2.label}}</td>
+  <td> {{form.password2}}</td>
+</tr>
+</table>
   {% csrf_token %}
   <button type="submit" >S’inscrire</button>
 </form>
@@ -36,3 +64,4 @@
   <a href="{% url 'login' %}">Se connecter</a> 
 </div>
 </div>
+{% endblock %}

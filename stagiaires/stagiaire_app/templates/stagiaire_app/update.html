@@ -4,17 +4,15 @@
 	<h2>Modifier les informations de {{ StagiaireInfo.last_name }}?</h2>
     <form action="" method="post">
         {% csrf_token %}
-<<<<<<< HEAD
-        {{form.as_p}}    
-=======
         {{edit_form.as_p}} 
-        <input type="submit" value="Enregistrer" class="btn btn-success btn-sm m-1">   
->>>>>>> 38bf358c66b6e42901fa4361fc9227303e3666c7
+        <div class="content">
+        <input type="submit" value="Enregistrer" class="btn btn-success btn-sm m-1">
+      </div>   
     </form>
     <form action="" method="post">
         {{ delete_form }}
         {% csrf_token %}
-        <button type="submit" >Êtes-Vous sûr de vouloir Supprimer</button>
+        <button type="submit" class="btn btn-danger"> Supprimer</button>
     </form>
     
 </div>

@@ -5,16 +5,11 @@
 {% block content %}
 <div class="content">
 	<h2>1020 Tehnologies</h2>
-<<<<<<< HEAD
-	<a href="{% url 'stagiaire_create' %}">Enregistrer un stagiaire</a>
-=======
-	<p><a href="{% url 'user_info' %}">Profil</a></p>
-	<p><a href="{% url 'stagiaire_create' %}">New stagiaire</a></p>
->>>>>>> 0b8d7c20bce6f940e464536b427eb2f439cf703b
-	<p>Enregistrement des stagiaires</p>
+	<a href="{% url 'stagiaire_create' %}" class="btn btn-info">Enregistrer un stagiaire</a> 
+	<p><h1>Enregistrement des stagiaires</h1></p>
         {% for stagiaire in stagiaires %}
 			<a href="{% url 'view_profil' stagiaire.id %}">
-				<h4>{{ stagiaire.specialite }}    {{ stagiaire.first_name }} {{ stagiaire.last_name }}</h4>
+				<h4> {{ stagiaire.first_name }} {{ stagiaire.last_name }}</h4>
 			</a>
         {% endfor %}
 </div>

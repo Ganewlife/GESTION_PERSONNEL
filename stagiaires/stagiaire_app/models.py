@@ -32,7 +32,6 @@ class StagiaireInfo(models.Model):
     cv = models.FileField(max_length=50) # le cv (un fichier)
     diplome = models.FileField(max_length=50) # le diplôme (un fichier)
     attestation = models.FileField(max_length=50) # l'attestation (un fichier)
-    is_viewed = models.BooleanField(default=False) # le marqueur de vu ou pas (par défaut à false ctd non lu)
     created_at = models.DateTimeField(auto_now_add=True)
 
 # table des stagiaires
