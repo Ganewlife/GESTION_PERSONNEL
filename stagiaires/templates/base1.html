@@ -4,23 +4,74 @@
 	<head>
 		<meta charset="utf-8">
 		<title>title</title>
-		<link href="{% static 'style.css'%}" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="{% static 'font-awesome.css'%}">
-		<link rel="stylesheet" href="{% static 'bootstrap.min.css'%}">
-		<link rel="stylesheet" href="{% static 'wot.png'%}">
-		
+		<link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
+		<link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+
+		<link type="text/css" href="{% static 'assets/vendor/sweetalert2/dist/sweetalert2.min.css'%}" rel="stylesheet">
+
+		<!-- Notyf -->
+		<link type="text/css" href="{% static 'assets/vendor/notyf/notyf.min.css'%}" rel="stylesheet">
+
+		<!-- Volt CSS -->
+		<link type="text/css" href="{% static 'assets/css/volt.css'%}" rel="stylesheet">
+
+		<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
 		
         <!-- Bootstrap core CSS -->
 
         
 	</head>
 	<body> 
-		<nav class="navtop">
-			<div>
-				<img src="{% static 'images/wot.png'%}" alt="#"/>
-				<h1></h1>
-			</div>
-		</nav>         
+		
+		
+		      
        {% block content %} {% endblock %}
+
+	        <script src="{% static 'assets/vendor/@popperjs/core/dist/umd/popper.min.js'%}"></script>
+			<script src="{% static 'assets/vendor/bootstrap/dist/js/bootstrap.min.js'%}"></script>
+
+			<!-- Vendor JS -->
+			<script src="{% static 'assets/vendor/onscreen/dist/on-screen.umd.min.js'%}"></script>
+
+			<!-- Slider -->
+			<script src="{% static 'assets/vendor/nouislider/distribute/nouislider.min.js'%}"></script>
+
+			<!-- Smooth scroll -->
+			<script src="{% static 'assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js'%}"></script>
+
+			<!-- Charts -->
+			<script src="{% static 'assets/vendor/chartist/dist/chartist.min.js'%}"></script>
+			<script src="{% static 'assets/vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js'%}"></script>
+
+			<!-- Datepicker -->
+			<script src="{% static 'assets/vendor/vanillajs-datepicker/dist/js/datepicker.min.js'%}"></script>
+
+			<!-- Sweet Alerts 2 -->
+			<script src="{% static 'assets/vendor/sweetalert2/dist/sweetalert2.all.min.js'%}"></script>
+
+			<!-- Moment JS -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+			
+		
+
+			<!-- Notyf -->
+			<script src="{% static 'assets/vendor/notyf/notyf.min.js'%}"></script>
+
+			<!-- Simplebar -->
+			<script src="{% static 'assets/vendor/simplebar/dist/simplebar.min.js'%}"></script>
+
+			
+			
+
+			<!-- Volt JS -->
+			<script src="{% static '/assets/js/volt.js"></script>
+
     </body>
 </html>

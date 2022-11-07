@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 
-{% load crispy_forms_tags %}
-
 {% block content %}
 <div class="content">
 	<h2>1020 Tehnologies</h2>
@@ -13,4 +11,50 @@
 			</a>
         {% endfor %}
 </div>
+
+<div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-centered table-nowrap mb-0 rounded">
+                            <thead class="thead-light">
+                                <tr>
+                                    
+                                    <th class="border-0">Nom</th>
+                                    <th class="border-0">Prénom</th>
+                                    <th class="border-0">Spécialité</th>
+									<th class="border-0">Actions</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+								{% for stagiaire in stagiaires %}
+                                <!-- Item -->
+                                <tr>
+                                    <td><a href="" class="text-primary fw-bold">{{ stagiaire.last_name }}</a> </td>
+                                    <td>
+										{{ stagiaire.first_name }}
+                                    </td>
+                                    <td>
+										{{ stagiaire.specialite }}
+                                    </td>
+                                    
+									<td><button class="btn btn-success btn-sm" data-toggle="modal"><a href="{% url 'view_profil' stagiaire.id %}">voir</a></button>
+									<button class="btn btn-warning btn-sm" data-toggle="modal"><a href="{% url 'stagiaire_edit' stagiaire.id %}">modifier</a></button></td>
+									
+								
+											
+                                   
+                                   
+                                </tr>
+                                <!-- End of Item -->
+
+                                <!-- Item -->
+                              
+								{% endfor %}  
+                                <!-- End of Item -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 {% endblock %}

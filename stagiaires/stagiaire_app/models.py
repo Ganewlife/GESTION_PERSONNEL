@@ -22,7 +22,7 @@ class Specialite(models.Model):
         return self.nom
 
 class StagiaireInfo(models.Model):
-    last_name = models.CharField(max_length=50) # nom
+    last_name = models.CharField(max_length=50 ) # nom
     first_name = models.CharField(max_length=70) # prénom
     birthday = models.DateField() # la date de naissance
     phone = models.CharField(max_length=10) # le numéro de téléphone
