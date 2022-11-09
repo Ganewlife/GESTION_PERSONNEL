@@ -19,6 +19,8 @@
 
 		<!-- Volt CSS -->
 		<link type="text/css" href="{% static 'assets/css/volt.css'%}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'assets/font-awesome/css/font-awesome.css'%}">
+
 
 		<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
@@ -36,6 +38,9 @@
               <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
                 <div class="d-flex align-items-center">
                   <!-- Search form -->
+                   <div class="input-group input-group-merge search-bar">
+                    <h4>1020 Tehnologies</h4>
+          </div>
                  
                   <!-- / Search form -->
                 </div>
@@ -45,6 +50,13 @@
                     <li class="nav-item dropdown">
                         <a>
                             <a href="{% url 'home' %}"></i>Accueil</a>
+                        </a>
+                        
+                      </li>
+
+                      <li class="nav-item dropdown ms-lg-3">
+                        <a>
+                            <a href="{% url 'stagiaire_create' %}"></i>Créer stagiaire</a>
                         </a>
                         
                       </li>
