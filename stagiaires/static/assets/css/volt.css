@@ -28814,17 +28814,24 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
     width: 100% !important;
     margin: 0 .5% !important;
 }
+
 .table-detail tbody tr{
-    border-bottom: 1px dotted #c2c2c2 !important;/*a7a7a7*/
-    line-height: 37px !important;
+    line-height: 10px !important;
 }
-.table-detail tbody td{
-    border-left: 1px dotted #c2c2c2 !important;
-    padding-left: 4% !important;
+.table-detail tbody th{
+    width: 45% !important;
+}
+.table-detail tbody td, .table-detail tbody th{
+    padding-left: 2% !important;
 }
 .table-detail tfoot td{
     text-align: center !important;
     padding-top: 10px !important;
+}
+
+.table-detail tbody td a:hover{
+    color: #00f !important;
+    text-decoration: underline !important;
 }
 
 /*update form*/
@@ -28863,6 +28870,7 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
     border-top-left-radius: 0 !important;
     padding-left: 0 !important;
 }
+
 .update_form p input:focus{
     outline-color: #aeaeae !important;
 }
