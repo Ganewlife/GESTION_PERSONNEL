@@ -20,7 +20,7 @@ class SignupForm(UserCreationForm):
         }
 
 class SpecialiteForm(forms.ModelForm):
-    class Metal: 
+    class Meta: 
         model = models.Specialite
         fields = '__all__'
 

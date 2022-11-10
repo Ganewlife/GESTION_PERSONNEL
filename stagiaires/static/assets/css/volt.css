@@ -10442,6 +10442,12 @@ textarea.form-control-lg {
     max-width: 500px !important;
 }
 
+/*full max width supplémentaire pour la page de connexion*/
+.fmxw-750 {
+    max-width: 685px !important;
+}
+/*fin de style supplémentaire*/
+
 .fmxw-999 {
     max-width: 999px !important;
 }
@@ -28774,3 +28780,178 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
 }
 
 /*# sourceMappingURL=volt.css.map */
+
+/* largeur du boutton submit et du inut du poste de la page inscription */
+.width{
+    max-width: 96%;
+}
+#id_post{
+    width: 99%;
+}
+
+/* laregeur des input de la page d'inscription */
+.d-inline-flex{
+    width: auto !important;
+}
+
+.d-inline-flex input{
+    width: 275px !important;
+}
+
+#id_post, .d-inline-flex input{
+    padding-left: 3%;
+    border-radius: 0.5rem !important;
+    border: 0.0625rem solid #D1D5DB !important;
+    line-height: 30px !important;
+}
+
+#id_post:focus, .d-inline-flex input:focus{
+    outline-color: #aeaeae !important;
+}
+
+/*style du tableau des détail sur le stagiaire de la page détail*/
+.table-detail{
+    width: 100% !important;
+    margin: 0 .5% !important;
+}
+.table-detail tbody tr{
+    border-bottom: 1px dotted #c2c2c2 !important;/*a7a7a7*/
+    line-height: 37px !important;
+}
+.table-detail tbody td{
+    border-left: 1px dotted #c2c2c2 !important;
+    padding-left: 4% !important;
+}
+.table-detail tfoot td{
+    text-align: center !important;
+    padding-top: 10px !important;
+}
+
+/*update form*/
+.mg-top, .mg-top h2{
+    margin-bottom: 0 !important;
+}
+.update_form{/* 
+    outline: 1px solid black; */
+    padding: 2% !important;
+    max-width: 100% !important;
+}
+.update_form p{/* 
+    outline: 1px solid black; */
+    width: 50% !important;
+    display: table-cell !important;
+}
+.update_form p label{
+    margin-top: 5px !important;
+    margin-right: 1% !important;
+    margin-left: 1% !important;
+    font-weight: bold !important;
+    width: 20% !important;
+}
+.update_form p input{
+    padding-left: 3%;
+    margin: 0 0 0 5% !important;
+    float: right !important;
+    width: 70% !important;
+    border-radius: 0.5rem !important;
+    border: 0.0625rem solid #D1D5DB !important;
+    line-height: 30px !important;
+}
+
+.update_form p input[type="file"]{
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    padding-left: 0 !important;
+}
+.update_form p input:focus{
+    outline-color: #aeaeae !important;
+}
+.update_form p:nth-child(2), .update_form p:nth-child(3){
+    float: left !important;
+    line-height: 15px !important;
+}
+.update_form p:nth-child(4), .update_form p:nth-child(5){
+    float: left !important;
+}
+.update_form p:nth-child(6), .update_form p:nth-child(7){
+    float: left !important;
+    line-height: 15px !important;
+}
+.update_form p:nth-child(8){
+    clear: both !important;
+}
+.update_form p:nth-child(8), .update_form p:nth-child(9){
+    float: left !important;
+    display: inline !important;
+    line-height: 20px !important;
+}
+.update_form p:nth-child(10), .update_form p:nth-child(11){
+    float: left !important;
+    display: inline !important;
+    line-height: 20px !important;
+}
+.update_form input[type="submit"]{
+    width: 30% !important;
+    color: #fff !important;
+}
+
+/*delete form*/
+.delete_form{
+    width: 26% !important;
+    float: right !important;
+}
+
+/*user profil table style*/
+.user-profil-table{
+    width: 100% !important;
+}
+/* 
+.user-profil-table tr{
+    border-bottom: 1px dotted #a7a7a7 !important;
+} */
+.user-profil-table tbody tr td{
+    width: 70%;
+    padding-left: 3% !important;
+}
+
+.user-profil-table tfoot tr{
+    border-bottom: 0 !important;
+}
+
+.user-profil-table tfoot tr td a{
+    float: right !important;
+    margin-top: 10px;
+}
+
+/* password form style */
+.changing-pass-form p input{
+    padding-left: 3%;
+    margin: 0 0 0 5% !important;
+    float: right !important;
+    width: 50% !important;
+    border-radius: 0.5rem !important;
+    border: 0.0625rem solid #D1D5DB !important;
+    line-height: 30px !important;
+    outline-color: #aeaeae !important;
+}
+
+.changing-pass-form p label{
+    margin-top: 5px !important;
+    margin-right: 1% !important;
+    margin-left: 1% !important;
+    font-weight: bold !important;
+    width: 40% !important;
+}
+
+.changing-pass-form button{
+    float: right;
+}/* 
+.icon-color{
+    color: #2361ce;
+    border-color: #2361ce;
+    color: #ffffff;
+    background-color: #2361ce;
+    border-color: #2361ce;
+    padding: 10px;
+    margin: 0;
+} */

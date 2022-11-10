@@ -89,6 +89,7 @@ def edit_stagiaire_info(request, stagiaire_info_id):
                 return redirect('home')
     context = {
         'edit_form': edit_form,
-        'delete_form': delete_form,}
+        'delete_form': delete_form,
+        'stagiaire_info':stagiaire_info}
     return render(request, 'stagiaire_app/update.html', context=context)
     

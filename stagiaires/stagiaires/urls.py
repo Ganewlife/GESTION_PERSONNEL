@@ -25,7 +25,7 @@ urlpatterns = [
     path('logout/', stagiaire_app.views.logout_user, name='logout'),
     path('home/', stagiaire_app.views.home, name='home'),
     path('signup/', stagiaire_app.views.signup, name='signup'),
-    path('user-info/>', stagiaire_app.views.user_profil, name='user_info'),
+    path('user-info/', stagiaire_app.views.user_profil, name='user_info'),
     path('change-password/', PasswordChangeView.as_view(
         template_name='stagiaire_app/password_change_form.html'),
          name='password_change'
