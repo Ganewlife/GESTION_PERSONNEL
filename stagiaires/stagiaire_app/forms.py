@@ -42,6 +42,7 @@ class AttestationForm(forms.ModelForm):
 class StagiaireForm(forms.ModelForm):
     edit_stagiaire = forms.BooleanField(widget=forms.HiddenInput, initial=True)
     class Meta:
+        """last_name = forms.CharField(max_length=50, label = 'nom')"""
         model = models.StagiaireInfo
         fields = '__all__'
 
