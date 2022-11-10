@@ -1,0 +1,141 @@
+{%  load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
+		<link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+
+		<link type="text/css" href="{% static 'assets/vendor/sweetalert2/dist/sweetalert2.min.css'%}" rel="stylesheet">
+
+		<!-- Notyf -->
+		<link type="text/css" href="{% static 'assets/vendor/notyf/notyf.min.css'%}" rel="stylesheet">
+
+		<!-- Volt CSS -->
+		<link type="text/css" href="{% static 'assets/css/volt.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/font-awesome/css/font-awesome.css'%}">
+
+
+		<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+		
+        <!-- Bootstrap core CSS -->
+
+        
+	</head>
+	<body>
+        <main class="content">
+    <nav class="navtop">
+
+        <nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
+            <div class="container-fluid px-0">
+              <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
+                <div class="d-flex align-items-center">
+                  <!-- Search form -->
+                   <div class="input-group input-group-merge search-bar">
+                    <h4>1020 Tehnologies</h4>
+          </div>
+                 
+                  <!-- / Search form -->
+                </div>
+                <!-- Navbar links -->
+                 
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item dropdown">
+                        <a>
+                            <a href="{% url 'home' %}"></i>Accueil</a>
+                        </a>
+                        
+                      </li>
+
+                      <li class="nav-item dropdown ms-lg-3">
+                        <a>
+                            <a href="{% url 'stagiaire_create' %}"></i>Créer stagiaire</a>
+                        </a>
+                        
+                      </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-dark notification-bell unread dropdown-toggle" data-unread-notifications="true" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                      <svg class="icon icon-sm text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
+                    </a>
+                    
+                  </li>
+                  <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div class="media d-flex align-items-center">
+                        <img class="avatar rounded-circle" alt="Image placeholder" src="{% static 'images/avatar.png'%}">
+                        <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                          <span class="mb-0 font-small fw-bold text-gray-900">User</span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
+                      <a class="dropdown-item d-flex align-items-center" href="{% url 'user_info' %}">
+                        <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+                        Mon profil
+                      </a>
+                      <div role="separator" class="dropdown-divider my-1"></div>
+                      <a class="dropdown-item d-flex align-items-center" href="{% url 'login' %}">
+                        <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>                
+                        Logout
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+       
+        
+{% block content %} {% endblock %}
+</main>
+
+<script src="{% static 'assets/vendor/@popperjs/core/dist/umd/popper.min.js'%}"></script>
+<script src="{% static 'assets/vendor/bootstrap/dist/js/bootstrap.min.js'%}"></script>
+
+<!-- Vendor JS -->
+<script src="{% static 'assets/vendor/onscreen/dist/on-screen.umd.min.js'%}"></script>
+
+<!-- Slider -->
+<script src="{% static 'assets/vendor/nouislider/distribute/nouislider.min.js'%}"></script>
+
+<!-- Smooth scroll -->
+<script src="{% static 'assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js'%}"></script>
+
+<!-- Charts -->
+<script src="{% static 'assets/vendor/chartist/dist/chartist.min.js'%}"></script>
+<script src="{% static 'assets/vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js'%}"></script>
+
+<!-- Datepicker -->
+<script src="{% static 'assets/vendor/vanillajs-datepicker/dist/js/datepicker.min.js'%}"></script>
+
+<!-- Sweet Alerts 2 -->
+<script src="{% static 'assets/vendor/sweetalert2/dist/sweetalert2.all.min.js'%}"></script>
+
+<!-- Moment JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+
+
+
+<!-- Notyf -->
+<script src="{% static 'assets/vendor/notyf/notyf.min.js'%}"></script>
+
+<!-- Simplebar -->
+<script src="{% static 'assets/vendor/simplebar/dist/simplebar.min.js'%}"></script>
+
+
+
+
+<!-- Volt JS -->
+<script src="{% static '/assets/js/volt.js'%}"></script>
+
+</body>
+</html>

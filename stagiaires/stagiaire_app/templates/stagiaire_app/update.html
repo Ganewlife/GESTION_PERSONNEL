@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-999">
+                <div class="mt-md-0 mg-top">
+                    <h3>Modification des informations sur le stagiaire</h3>
+                    <h4>{{ stagiaire_info.first_name }}</h4>
+                </div>
+                <form action="" method="post" class="update_form">
+                    {% csrf_token %}
+                    {{ edit_form.as_p }} 
+                    <div class="content">
+                        <input type="submit" value="Enregistrer" class="btn btn-success">
+                    </div>
+                </form>
+                <form action="" method="post" class="delete_form">
+                    {{ delete_form.as_p }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger"> Supprimer cet enregistrement</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

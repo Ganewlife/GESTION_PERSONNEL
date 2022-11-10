@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content update">
+	<h2>Enregistrer un stagiaire</h2>
+    <div class="row">
+        <div class="col-12 col-xl-8">
+            <div class="card card-body border-0 shadow mb-4">
+                <h2 class="h5 mb-4">General information</h2>
+                <form action="" method="post" enctype="multipart/form-data" >
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div>
+                                <label for="first_name">{{ stagiaire_form.first_name.label_tag }}</label>
+                                <div class="input-group">
+                                <span class="input-group-text" id="basic-addon2">
+                                    
+                                </span>
+                                {{ stagiaire_form.first_name }}   
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div>
+                                <label for="last_name">{{ stagiaire_form.last_name.label_tag }}</label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon2">
+                                    </span>
+                                  {{ stagiaire_form.first_name }} 
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-3">
+                            <label for="birthday">{{ stagiaire_form.birthday.label_tag }}</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                </span>
+                                {{ stagiaire_form.birthday}}
+                             </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="gender"> {{ stagiaire_form.email.label_tag}}</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                </span>
+                                {{ stagiaire_form.email}}
+                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="email">{{ stagiaire_form.phone.label_tag}}</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                    </span>
+                                    {{ stagiaire_form.phone}}
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="phone">{{ stagiaire_form.emergency_phone.label_tag}}</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                    </span>
+                                    {{ stagiaire_form.emergency_phone}}
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="phone">{{ stagiaire_form.specialite.label_tag}}</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                    </span>
+                                    {{ stagiaire_form.specialite}}
+                                </div>    
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="phone">{{ stagiaire_form.cv.label_tag}}</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                    </span>
+                                    {{ stagiaire_form.cv}}
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="phone">{{ stagiaire_form.diplome.label_tag}}</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                    </span>
+                                    {{ stagiaire_form.diplome}}
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="phone">{{ stagiaire_form.attestation.label_tag}}</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                    </span>
+                                    {{ stagiaire_form.attestation}}
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                    <div class="mt-3">
+                        <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit">Enregisitrer</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+       
+   
+</div>
+{% endblock %}

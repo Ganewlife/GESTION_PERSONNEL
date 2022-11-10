@@ -1,0 +1,42 @@
+{% extends 'base.html' %}  
+
+{% block title %}  
+<title>Informations Personnelle</title>  
+{% endblock title %} 
+
+{% block content %}  
+<p><a href="{% url 'home' %}" class="btn btn-danger">Retour</a></p>
+<!-- <p><a href="{% url 'stagiaire_create' %}">New stagiaire</a></p> -->
+<div class="container">
+        <div class="row justify-content-center form-bg-image" data-background-lg="../../assets/img/illustrations/signin.svg">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-750">
+                                <div class="text-center text-md-center mb-4 mt-md-0">
+                                        <h1 class="mb-0 h3">{{ user.post }}</h1>
+                                </div>
+                                <table class="user-profil-table">
+                                        <tbody>
+                                                <tr>
+                                                        <th><h6>Nom Prénoms :</h6></th>
+                                                        <td><h5>{{ user.last_name }}&nbsp;{{ user.first_name }}</h5></td>
+                                                </tr>
+                                                <tr>
+                                                        <th><h6>Nom d'utilisateur :</h6></th>
+                                                        <td><h5>{{ user.username }}</h5></td>
+                                                </tr>
+                                                <tr>
+                                                        <th><h6>Email :</h6></th>
+                                                        <td><h6>{{ user.email }}</h6></td>
+                                                </tr> 
+                                        </tbody>
+                                        <tfoot>
+                                                <tr>
+                                                        <td colspan="2"><a href="{% url 'password_change' %}" class="btn btn-outline-info"><i class="fa fa-lock icon-color"></i>&nbsp;&nbsp;Changer le mot de passe</a></td>
+                                                </tr>  
+                                        </tfoot>
+                                </table>
+                        </div>
+                </div>
+        </div>
+</div>
+{% endblock %}  

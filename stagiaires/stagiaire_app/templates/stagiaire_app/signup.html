@@ -1,0 +1,97 @@
+{% extends 'base1.html' %}
+  <!-- <div class="login-card">
+    <h1>Inscription</h1><br>
+    {% if form.errors %}
+        {{ form.errors }}
+    {% endif %}
+  <form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <button type="submit" >S’inscrire</button>
+  </form>
+
+  <div class="register-help">
+    <a href="{% url 'login' %}">Se connecter</a> 
+  </div>
+</div> -->
+
+{% block content %}
+<div class="login-card">
+  
+  {% if form.errors %}
+    {{ form.errors }}
+  {% endif %}
+ 
+  <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
+    <div class="container">
+      <div class="row justify-content-center form-bg-image" data-background-lg="../../assets/img/illustrations/signin.svg">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-750">
+            <div class="text-center text-md-center mb-4 mt-md-0">
+              <h1 class="mb-0 h3">Inscription </h1>
+            </div>
+            <form method="post">
+              <div class="d-inline-flex d-grid">
+                <div class="mb-3 mx-2"><!-- for username -->
+                  <label for="{{form.username.label}}">Nom d'utilisateur</label>
+                  <div class="input-group">
+                    {{form.username}}
+                  </div>  
+                </div>
+                <div class="mb-3 mx-2"><!-- for email -->
+                  <label for="{{form.email.label}}">Adresse électronique</label>
+                  <div class="input-group">
+                    {{form.email}}
+                  </div>  
+                </div>
+              </div>
+              <div class="d-inline-flex">
+                <div class="mb-3 mx-2"><!-- for first name -->
+                  <label for="{{form.first_name.label}}">Prénom</label>
+                  <div class="input-group">
+                    {{form.first_name}}
+                  </div>  
+                </div>
+                <div class="mb-3 mx-2"><!-- for last name -->
+                  <label for="{{form.last_name.label}}">Nom</label>
+                  <div class="input-group">
+                    {{form.last_name}}
+                  </div>  
+                </div>
+              </div>
+              <div class="d-inline-flex">
+                <div class="mb-3 mx-2"><!-- for password -->
+                  <label for="{{form.password1.label}}">Mot de passe</label>
+                  <div class="input-group">
+                    {{form.password1}}
+                  </div>  
+                </div>
+                <div class="mb-3 mx-2"><!-- for password confirmation -->
+                  <label for="{{form.password2.label}}">Confirmation du mot de passe</label>
+                  <div class="input-group">
+                    {{form.password2}}
+                  </div>  
+                </div>
+              </div>
+              <div class="mb-4 mx-2"><!-- for post -->
+                <label for="{{form.post.label}}">Poste</label>
+                <div class="input-group">
+                  {{form.post}}
+                </div>  
+              </div>
+              
+              <div class="d-grid mx-2 mb-1 mb-3 width"><!-- for submit -->
+                <button type="submit" class="btn btn-info">S'inscrire</button>
+              </div>
+                {% csrf_token %}
+            </form>
+            <div class="register-help">
+              <p>Avez-vous déjà un compte ? <a href="{% url 'login' %}" class="fw-bold hovertext">Connectez-vous ici</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

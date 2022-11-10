@@ -1,0 +1,65 @@
+{% extends 'base.html' %}  
+
+{% block title %}  
+<title>Informations Stagiaire</title>  
+{% endblock title %} 
+
+{% block content %} 
+<div class="container bg-white shadow border-0 rounded border-light p-4 p-lg-4 fmxw-750">
+    <table class="table-detail">
+        <thead>
+            <tr>
+                <th colspan="2"><h4>Informations détaillées sur le stagiaire<br>{{ infos.first_name }}</h4></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><h5><strong>Nom :</strong></h5></th>
+                <td><strong>{{ infos.last_name }}</strong></td>
+            </tr>
+            <tr>
+                <th><h5><strong>Prénom :</strong></h5></th>
+                <td><strong>{{ infos.first_name }}</strong></td>
+            </tr>
+            <tr>
+                <th><h5><strong>Date de Naissance :</strong></h5></th>
+                <td><strong> {{ infos.birthday }}</strong></td>
+            </tr>
+            <tr>
+                <th><h5><strong>Télephone :</strong></h5></th>
+                <td><strong>{{ infos.phone }}</strong></td>
+            </tr>
+            <tr>
+                <th><h5><strong>Télephone Urgence :</strong></h5></th>
+                <td><strong>{{ infos.emergency_phone }}</strong></td>
+            </tr>
+            <tr>
+                <th><h5><strong>Email :</strong></h5></th>
+                <td><strong>{{ infos.email }}</strong></td>
+            </tr>
+            <tr>
+                <th><h5><strong>Date de d'enregistrement :</strong></h5></th>
+                <td><strong>{{ infos.created_at }}</strong></td>
+            </tr>
+            <tr>
+                <th><h5><strong>CV</h5></th>
+                <td><a href="{{ infos.cv.url }}" target="_blank">Voir le document</a></strong></td>
+            </tr>
+            <tr>
+                <th><h5><strong>Diplome</strong></h5></th>
+                <td><a href="{{ infos.diplome.url }}" target="_blank">Voir le document</a></td>
+            </tr>
+            <tr>
+                <th><h5><strong>Attestation</strong></h5></th>
+                <td><a href="{{ infos.attestation.url }}" target="_blank">Voir le document</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><a href="{% url 'home' %}" class="btn btn-danger">Retour</a></td>
+                <td><a href="{% url 'stagiaire_edit' infos.id %}" class="btn btn-success">Modifier</a></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+{% endblock %}  
