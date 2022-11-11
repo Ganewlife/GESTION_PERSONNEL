@@ -28,7 +28,7 @@
                                 <!-- Item -->
                                 <tr>
                                     <td>
-                                        <a href="{% url 'view_profil' stagiaire.id %}" class="text-primary fw-bold">{{ stagiaire.last_name }}</a>
+                                        {{ stagiaire.last_name }}
                                     </td>
                                     <td>
 										{{ stagiaire.first_name }}
@@ -46,7 +46,7 @@
                                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h2 class="h6 modal-title">Fiche d'enregistrement de {{ stagiaire.first_name }}&nbsp;{{ stagiaire.last_name }}</h2>
+                                                                        <h2 class="h6 modal-title">Fiche d'enregistrement de<br/>{{ stagiaire.first_name }}&nbsp;{{ stagiaire.last_name }}</h2>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                     </div>
                                                                     <div class="modal-body modal-body-private">
@@ -61,32 +61,32 @@
                                                                                     <td><p><strong>{{ stagiaire.first_name }}</strong></p></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <th>Date de Naissance :</th>
-                                                                                    <th>Email :</th>
+                                                                                    <th class="border-0">Date de Naissance :</th>
+                                                                                    <th class="border-0">Email :</th>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td><p><strong> {{ stagiaire.birthday }}</strong></p></td>
                                                                                     <td><p><strong>{{ stagiaire.email }}</strong></p></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <th>Télephone :</th>
-                                                                                    <th>Télephone d'urgence :</th>
+                                                                                    <th class="border-0">Télephone :</th>
+                                                                                    <th class="border-0">Télephone d'urgence :</th>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td><p><strong>{{ stagiaire.phone }}</strong></p></td>
                                                                                     <td><p><strong>{{ stagiaire.emergency_phone }}</strong></p></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <th>Date d'enregistrement :</th>
-                                                                                    <th>CV :</th>
+                                                                                    <th class="border-0">Date d'enregistrement :</th>
+                                                                                    <th class="border-0">CV :</th>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td><p><strong>{{ stagiaire.created_at }}</strong></p></td>
                                                                                     <td><p><a href="{{ stagiaire.cv.url }}" target="_blank">Voir le document <i class="fa fa-download"></i></a></p></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <th>Diplome :</th>
-                                                                                    <th>Attestation :</th>
+                                                                                    <th class="border-0">Diplome :</th>
+                                                                                    <th class="border-0">Attestation :</th>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td><p><a href="{{ stagiaire.diplome.url }}" target="_blank">Voir le document <i class="fa fa-download"></i></a></p></td>
