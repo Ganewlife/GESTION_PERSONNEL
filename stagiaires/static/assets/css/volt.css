@@ -10447,6 +10447,9 @@ textarea.form-control-lg {
     max-width: 685px !important;
 }
 /*fin de style supplémentaire*/
+.fmxw-700 {
+    max-width: 600px !important;
+}
 
 .fmxw-999 {
     max-width: 999px !important;
@@ -28769,7 +28772,7 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
 }
 
 .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
-    width: 92% !important;
+    width: 91% !important;
     border-radius: 0.5rem !important;
     border: 0.0625rem solid #D1D5DB !important;
     border-top-left-radius: 0 !important;
@@ -28778,6 +28781,30 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
 .hovertext {
     color: #35C0ED ;
 }
+
+.create_table input, .create_table select {
+    width: 100% !important;
+    border-radius: 0.5rem !important;
+    border: 0.0625rem solid #D1D5DB !important;
+    outline-color: #aeaeae;
+    padding-left: 10px;
+}
+
+.create_table input[type="file"]{
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+.create_table select{
+    height: 27px;
+}
+
+
+
+
+
 
 /*# sourceMappingURL=volt.css.map */
 
@@ -28806,6 +28833,9 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
 }
 
 #id_post:focus, .d-inline-flex input:focus{
+    outline-color: #aeaeae !important;
+}
+#id_username, #id_password{
     outline-color: #aeaeae !important;
 }
 
@@ -28847,6 +28877,7 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
     outline: 1px solid black; */
     width: 50% !important;
     display: table-cell !important;
+    padding-right: 1% !important;
 }
 .update_form p label{
     margin-top: 5px !important;
@@ -28865,13 +28896,19 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
     line-height: 30px !important;
 }
 
+.update_form p select{
+    width: 70% !important ;
+    border-radius: .5rem !important;
+    float: right !important;
+    border: 0.0625rem solid #D1D5DB !important;
+}
 .update_form p input[type="file"]{
     border-bottom-left-radius: 0 !important;
     border-top-left-radius: 0 !important;
     padding-left: 0 !important;
 }
 
-.update_form p input:focus{
+.update_form p input:focus, .update_form p select:focus{
     outline-color: #aeaeae !important;
 }
 .update_form p:nth-child(2), .update_form p:nth-child(3){
@@ -28953,13 +28990,4 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
 
 .changing-pass-form button{
     float: right;
-}/* 
-.icon-color{
-    color: #2361ce;
-    border-color: #2361ce;
-    color: #ffffff;
-    background-color: #2361ce;
-    border-color: #2361ce;
-    padding: 10px;
-    margin: 0;
-} */
+}
