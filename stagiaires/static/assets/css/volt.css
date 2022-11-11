@@ -28841,24 +28841,34 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
 
 /*style du tableau des détail sur le stagiaire de la page détail*/
 .table-detail{
-    width: 100% !important;
-    margin: 0 .5% !important;
-}
-
-.table-detail tbody tr{
-    line-height: 10px !important;
+    margin: auto !important;
 }
 .table-detail tbody th{
-    width: 45% !important;
+    font-weight: bold;
+    width: 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
-.table-detail tbody td, .table-detail tbody th{
+.table-detail tbody tr{
+    line-height: 30px !important;
+    width: 100% !important;
+}
+.table-detail tbody td{
+    color: #000;
+    width: 50% !important;
+    padding-left: 4% !important;
+    padding: auto !important;
+}
+.table-detail tbody th{
     padding-left: 2% !important;
 }
 .table-detail tfoot td{
     text-align: center !important;
     padding-top: 10px !important;
 }
-
+.table-detail tbody td a{
+    color: #000;
+}
 .table-detail tbody td a:hover{
     color: #00f !important;
     text-decoration: underline !important;

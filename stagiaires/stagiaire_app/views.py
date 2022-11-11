@@ -69,7 +69,7 @@ def home(request):
 @login_required
 def view_stagiaire_info(request, stagiaire_info_id):
     infos = get_object_or_404(models.StagiaireInfo, id=stagiaire_info_id)
-    return render(request, 'stagiaire_app/detail.html', {'infos': infos})
+    return render(request, 'stagiaire_app/home.html', {'infos': infos})
 
 @login_required
 def edit_stagiaire_info(request, stagiaire_info_id):
