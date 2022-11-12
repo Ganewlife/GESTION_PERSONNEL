@@ -151,3 +151,7 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 MEDIA_URL = '/media/'#televersé les fichiers
 MEDIA_ROOT = BASE_DIR.joinpath('media/')#repertoire ou seront sauvegardont nos fichiers
+
+#session time
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_COOKIE_AGE = 600 #10 (60 secondes * 10) minutes
