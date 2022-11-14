@@ -29,9 +29,9 @@ class StagiaireInfo(models.Model):
     emergency_phone = models.CharField(max_length=10) # le numéro de téléphone en cas d'urgence
     email = models.EmailField(max_length=100) # l'adresse mail
     specialite = models.ForeignKey(Specialite, on_delete=models.CASCADE) # la spécialité (clé étrangère venant de la table Specialite)
-    cv = models.FileField(max_length=50) # le cv (un fichier)
-    diplome = models.FileField(max_length=50) # le diplôme (un fichier)
-    attestation = models.FileField(max_length=50) # l'attestation (un fichier)
+    cv = models.FileField(max_length=50, null=True) # le cv (un fichier)
+    diplome = models.FileField(max_length=50, null=True) # le diplôme (un fichier)
+    # attestation = models.FileField(max_length=50, null=True) # l'attestation (un fichier)
     created_at = models.DateTimeField(auto_now_add=True)
 
 # table des stagiaires

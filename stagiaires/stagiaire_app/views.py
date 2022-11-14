@@ -50,7 +50,7 @@ def user_profil(request):
 # Decorator don't forget it
 @login_required
 def stagiaire_and_files_upload(request):
-    stagiaire_form = forms.StagiaireForm()
+    stagiaire_form = forms.StagiaireForm(use_required_attribute=False)
     if request.method == 'POST':
         stagiaire_form = forms.StagiaireForm(request.POST, request.FILES)
         if stagiaire_form.is_valid():
